@@ -1,30 +1,45 @@
-import { Star } from "lucide-react";
-import { Link } from "react-router";
+const listItems = [
+  'Work',
+  'Services',
+  'Pricing',
+  'Blog',
+  'Templates',
+  'About'
+]
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-800 shadow-lg flex items-center justify-between py-3 px-6 md:px-12 z-50">
-      {/* Brand Logo & Name */}
-      {/* <Link to="/" className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition">
-        <Star className="w-7 h-7 fill-current" />
-        <span className="font-semibold text-xl">React Router</span>
-      </Link> */}
+    <div className='fixed bg-black/40 flex justify-between
+    items-center gap-16 py-3 px-10 left-1/2
+    -translate-x-1/2 top-5 rounded-full backdrop-blur-md
+    text-white shadow-lg z-10
+    border border-white/10
+    hover:bg-black/50 transition-all duration-300
+    '>
+      <ul className='flex gap-8 text-xl'>
+        {listItems.map((item) => (
+          <li className='relative group cursor-pointer' 
+          key={item}>
+            {item}
+            <span className='absolute left-0
+            -bottom-1.25 w-0 h-1 rounded-xl
+            bg-linear-to-r from-blue-500
+            to-green-500 transition-all
+            duration-300 group-hover:w-full'>
+            </span>
+          </li>
+        ))}
+      </ul>
 
-      {/* Navigation Links */}
-      <div className="flex items-center gap-3">
-        <Link 
-          to="/" 
-          className="py-1.5 px-4 text-base font-medium text-white hover:text-slate-900 rounded-full hover:bg-slate-100 transition duration-200"
-        >
-          Home
-        </Link>
-        <Link 
-          to="/about" 
-          className="py-1.5 px-4 text-base font-medium text-white hover:text-slate-900 rounded-full hover:bg-slate-100 transition duration-200"
-        >
-          About
-        </Link>
-      </div>
-    </nav>
-  );
+      <button className="bg-linear-to-r
+      from-blue-500 to-green-500 py-1 px-6
+      rounded-3xl shadow-2xl text-white text-lg
+      font-semibold hover:from-blue-600 hover:to-green-500
+      hover:shadow-green-500 shadow-blue-500">
+        Contact
+      </button>
+    </div>
+  )
 }
+
+export default Navbar
