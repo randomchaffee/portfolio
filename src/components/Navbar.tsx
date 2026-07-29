@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 interface NavLink {
   label: string;
   href: string;
@@ -11,11 +13,35 @@ const listItems: NavLink[] = [
 ];
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // effect toggle after 20px
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full bg-neutral-900 text-white">
+    // w-full bg-zinc-900 text-white
+    <header 
+      className={`fixed top-0 left-0 w-full z-50 text-white transition-all
+        duration-300 ease-in-out ${
+          isScrolled
+            ? "bg-zinc-900/60 backdrop-blur-md border-b border-white/10 shadow-lg py-0"
+            : "bg-zinc-900 py-0"
+        }`}
+    >
       <nav 
         aria-label="Main Navigation"
-        className="hidden md:flex items-center justify-between py-5 px-10"
+        className="hidden md:flex items-center justify-between py-5 px-10 transition-all duration-300"
       >
         {/* left side */}
         <div className="flex flex-col text-lg font-bold leading-tight">

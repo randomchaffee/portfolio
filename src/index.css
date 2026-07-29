@@ -3,6 +3,6 @@
 
 @layer base {
     body {
-        @apply bg-neutral-900 text-white min-h-screen;
+        @apply bg-zinc-900 text-white min-h-screen;
     }
 }
