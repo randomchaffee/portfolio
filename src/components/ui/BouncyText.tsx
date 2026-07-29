@@ -18,14 +18,14 @@ const containerVariants: Variants = {
 };
 
 const letterVariants: Variants = {
-    hidden: { y: 30, opacity: 0},
+    hidden: { y: 10, opacity: 0},
     visible: {
         y: 0,
         opacity: 1,
         transition: {
             type: "spring",
-            damping: 16,
-            stiffness: 250
+            damping: 12,
+            stiffness: 300
         },
     },
 };
