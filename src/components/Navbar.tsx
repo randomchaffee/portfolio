@@ -7,7 +7,7 @@ interface NavLink {
 }
 
 const listItems: NavLink[] = [
-  {label: "Work", href: "#"},
+  {label: "Work", href: "/work"},
   {label: "About", href: "#"},
   {label: "Blog", href: "#"},
   {label: "Contact", href: "#"},
