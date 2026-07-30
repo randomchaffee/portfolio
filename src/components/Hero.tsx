@@ -11,7 +11,7 @@ import { BouncyIcon } from "./ui/BouncyIcon";
 
 const Hero = () => {
     return (
-        <section className="relative md:pl-20 py-48 flex flex-col md:flex-row 
+        <section className="relative md:pl-20 py-24 md:py-48 flex flex-col md:flex-row 
         items-center justify-between gap-10 max-w-7xl">
             {/* left side */}
             <div className="px-15 flex flex-col text-4xl font-normal">
@@ -19,12 +19,12 @@ const Hero = () => {
                     <BouncyText text="Welcome to my site! I'm Evan," />
                 </span>
                 <span className="pb-4">
-                    <BouncyText text="a hobbyist dev and CS student." delayOffset={0.7} />
+                    <BouncyText text="a hobbyist dev and CS student." delayOffset={1.2} />
                 </span>
                 <span className="text-lg font-light opacity-80">
-                    <SubtleBounceText text="this website is work in progress!" delayOffset={2.4} />
+                    <SubtleBounceText text="this website is work in progress!" delayOffset={2.5} />
                 </span>
-                <BouncyBox delayOffset={2.4}>
+                <BouncyBox delayOffset={2.6}>
                     <ul className="mt-24 flex flex-row items-center gap-2">
                         <li>
                         <BouncyIcon
@@ -42,7 +42,7 @@ const Hero = () => {
                                 />
                             </a>
                         }
-                        delayOffset={2.5}
+                        delayOffset={2.6}
                         />
                         </li>
                         <li>
@@ -61,7 +61,7 @@ const Hero = () => {
                                     />
                                 </a>
                             }
-                            delayOffset={2.6}
+                            delayOffset={2.7}
                         />
                         </li>
                         <li>
@@ -80,7 +80,7 @@ const Hero = () => {
                                     />
                                 </a>
                             }
-                            delayOffset={2.7}
+                            delayOffset={2.8}
                         />
                         </li>
                         <li>
@@ -99,7 +99,7 @@ const Hero = () => {
                                     />
                                 </a>
                             }
-                            delayOffset={2.8}
+                            delayOffset={2.9}
                         />
                         </li>
                     </ul>
