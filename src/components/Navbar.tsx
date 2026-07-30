@@ -57,7 +57,7 @@ const Navbar = () => {
           {/* left side */}
           <div className="flex flex-col items-center md:items-baseline text-lg font-bold leading-tight">
             <a 
-              href="#"
+              href="/"
               className="flex flex-col text-sm md:text-lg md:py-0.5 font-bold leading-tight"
             >
               <span>Evan</span>

@@ -1,7 +1,7 @@
 const Work = () => {
     
   return (
-    <div>Work</div>
+    <div className="p-12">site work-in-progress</div>
     
   )
 }
