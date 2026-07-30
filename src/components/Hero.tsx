@@ -16,13 +16,13 @@ const Hero = () => {
             {/* left side */}
             <div className="px-15 flex flex-col text-4xl font-normal">
                 <span className="pb-5">
-                    <BouncyText text="Hello! I'm Evan." />
+                    <BouncyText text="Welcome to my site! I'm Evan," />
                 </span>
                 <span className="pb-4">
-                    <BouncyText text="Ambatu toilet idk what to write." delayOffset={0.7} />
+                    <BouncyText text="a hobbyist dev and CS student." delayOffset={0.7} />
                 </span>
                 <span className="text-lg font-light opacity-80">
-                    <SubtleBounceText text="website is work in progress!" delayOffset={2.4} />
+                    <SubtleBounceText text="this website is work in progress!" delayOffset={2.4} />
                 </span>
                 <BouncyBox delayOffset={2.4}>
                     <ul className="mt-24 flex flex-row items-center gap-2">
