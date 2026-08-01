@@ -1,5 +1,18 @@
+import { useEffect, useState } from "react";
+
+const STORAGE_KEY = "bg-art-enabled";
+
 const Footer = () => {
-  return (
+    const [showBg, setShowBg] = useState(() => {
+        return localStorage.getItem(STORAGE_KEY) === "true";
+    });
+
+    useEffect(() => {
+        document.body.classList.toggle("bg-art-on", showBg);
+        localStorage.setItem(STORAGE_KEY, String(showBg));
+    }, [showBg]);
+
+    return (
     <footer className="opacity-80 bg-emerald-950/10 border-t border-zinc-800 text-zinc-100 px-4 md:px-16 lg:px-28">
         {/* contact info */}
         <div className="flex flex-row py-6">
@@ -47,6 +60,14 @@ const Footer = () => {
         <div className="flex flex-col pb-8 items-center md:items-baseline">
             <span>© 2026 randomchaffee</span>
             <span>This site is work in progress.</span>
+            <span>
+                <button 
+                    onClick={() => setShowBg(v => !v)}
+                    className="hover:text-white hover:underline transition-all duration-300"
+                >
+                    Toggle background
+                </button>
+            </span>
         </div>
     </footer>
   )
