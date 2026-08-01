@@ -41,10 +41,10 @@ const Navbar = () => {
     <>
       <header 
         className={`fixed top-0 left-0 w-full z-50 text-white transition-all
-          duration-300 ease-in-out ${
+          duration-300 ease-in-out border-b ${
             isScrolled
-              ? "bg-zinc-900/60 backdrop-blur-md border-b border-white/10 shadow-lg py-0"
-              : "py-0"
+              ? "backdrop-blur-md border-white/10 shadow-lg py-0"
+              : "border-white/0 py-0"
           }`}
       >
         <nav 

@@ -7,25 +7,4 @@
     position: relative;
     overflow-x: hidden;
   }
-
-  body::after {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    background: url('/bg-pixel.png') bottom center / cover no-repeat;
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-    z-index: -1;
-    will-change: transform, opacity;
-    transition: opacity 650ms ease, transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  body.bg-art-on::after {
-    opacity: 0.25;
-    transform: translateY(0);
-  }
 }
