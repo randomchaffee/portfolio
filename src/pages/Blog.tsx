@@ -1,4 +1,4 @@
-const Work = () => {
+const Blog = () => {
     
   return (
     <div className="p-12">site work-in-progress</div>
@@ -6,4 +6,4 @@ const Work = () => {
   )
 }
 
-export default Work;
+export default Blog;

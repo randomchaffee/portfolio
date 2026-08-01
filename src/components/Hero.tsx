@@ -19,12 +19,12 @@ const Hero = () => {
                     <BouncyText text="Welcome to my site! I'm Evan," />
                 </span>
                 <span className="pb-4">
-                    <BouncyText text="a hobbyist dev and CS student." delayOffset={1.2} />
+                    <BouncyText text="an aspiring SWE and CS student." delayOffset={1.2} />
                 </span>
                 <span className="text-lg font-light opacity-80">
-                    <SubtleBounceText text="this website is work in progress!" delayOffset={2.5} />
+                    <SubtleBounceText text="thank you for visiting my site! feel free to explore." delayOffset={2.9} />
                 </span>
-                <BouncyBox delayOffset={2.6}>
+                <BouncyBox delayOffset={3}>
                     <ul className="mt-24 flex flex-row items-center gap-2">
                         <li>
                         <BouncyIcon
@@ -42,7 +42,7 @@ const Hero = () => {
                                 />
                             </a>
                         }
-                        delayOffset={2.6}
+                        delayOffset={3}
                         />
                         </li>
                         <li>
@@ -61,7 +61,7 @@ const Hero = () => {
                                     />
                                 </a>
                             }
-                            delayOffset={2.7}
+                            delayOffset={3.1}
                         />
                         </li>
                         <li>
@@ -80,7 +80,7 @@ const Hero = () => {
                                     />
                                 </a>
                             }
-                            delayOffset={2.8}
+                            delayOffset={3.2}
                         />
                         </li>
                         <li>
@@ -99,7 +99,7 @@ const Hero = () => {
                                     />
                                 </a>
                             }
-                            delayOffset={2.9}
+                            delayOffset={3.3}
                         />
                         </li>
                     </ul>

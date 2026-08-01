@@ -7,10 +7,7 @@ interface NavLink {
 }
 
 const listItems: NavLink[] = [
-  {label: "Work", href: "/work"},
-  {label: "About", href: "#"},
-  {label: "Blog", href: "#"},
-  {label: "Contact", href: "#"},
+  {label: "Blog", href: "/blog"},
 ];
 
 const Navbar = () => {
@@ -47,7 +44,7 @@ const Navbar = () => {
           duration-300 ease-in-out ${
             isScrolled
               ? "bg-zinc-900/60 backdrop-blur-md border-b border-white/10 shadow-lg py-0"
-              : "bg-zinc-900 py-0"
+              : "py-0"
           }`}
       >
         <nav 
