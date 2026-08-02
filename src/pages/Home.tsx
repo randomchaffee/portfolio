@@ -1,6 +1,4 @@
 import Hero from "../components/Hero";
-import BouncyBox from "../components/ui/BouncyBox";
-import BouncingArrow from "../components/ui/BouncingArrow";
 import { ActivityTimeline, DocumentList } from "../components/ui/TimelineList";
 
 const sampleDocs = [
@@ -22,16 +20,6 @@ const Home = () => {
   return (
     <>
         <Hero />
-
-        <BouncyBox className="flex flex-col items-center justify-center gap-6 p-5 mb-12 text-zinc-100">
-        {/* Quote Text */}
-        <p className="text-base md:text-sm opacity-70 tracking-tighter text-center font-normal">
-            Check out some of my stuff below. Site is still work-in-progress.
-        </p>
-
-        {/* Repeating Subtle Arrow */}
-        <BouncingArrow size={20} color="#d4d4d8" bounceHeight={8} duration={1} />
-        </BouncyBox>
 
         {/* links and timeline */}
         <section className="max-w-350 mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-48">
