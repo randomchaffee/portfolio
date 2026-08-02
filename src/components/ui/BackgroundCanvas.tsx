@@ -15,7 +15,7 @@ export const BackgroundCanvas: React.FC<BackgroundCanvasProps> = ({ isArtOn }) =
         className={`
           absolute inset-0 bg-bottom bg-cover bg-no-repeat opacity-25
           will-change-transform
-          transition-transform duration-1500 ease-[cubic-bezier(0.22,1,0.36,1)]
+          transition-transform duration-700 ease-linear
           ${isArtOn 
             ? 'translate-y-0' 
             : 'translate-y-full'

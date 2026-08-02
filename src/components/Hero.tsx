@@ -11,10 +11,10 @@ import { BouncyIcon } from "./ui/BouncyIcon";
 
 const Hero = () => {
     return (
-        <section className="relative md:pl-20 py-24 md:py-48 flex flex-col md:flex-row 
-        items-center justify-between gap-10 max-w-7xl">
+        <section className="relative md:pr-24 py-24 md:py-48 flex flex-col md:flex-row 
+        items-center justify-between gap-10 max-w-7xl mx-auto min-h-[(calc(100vh-4rem))]">
             {/* left side */}
-            <div className="px-15 flex flex-col text-4xl font-normal">
+            <div className="px-16 flex flex-col text-4xl font-normal">
                 <span className="pb-5">
                     <BouncyText text="Welcome to my site! I'm Evan," />
                 </span>
@@ -22,7 +22,7 @@ const Hero = () => {
                     <BouncyText text="an aspiring SWE and CS student." delayOffset={1.2} />
                 </span>
                 <span className="text-lg font-light opacity-80">
-                    <SubtleBounceText text="thank you for visiting my site! feel free to explore." delayOffset={2.9} />
+                    <SubtleBounceText text="thank you for visiting! feel free to explore." delayOffset={2.9} />
                 </span>
                 <BouncyBox delayOffset={3}>
                     <ul className="mt-24 flex flex-row items-center gap-2">

@@ -6,12 +6,12 @@ import Blog from "./pages/Blog";
 
 export default function App() {
   return (
-    <div className="pt-24">
+    <div className="pt-24 min-h-screen flex flex-col">
       <Navbar />
       <main className="grow">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Blog />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </main>
 
