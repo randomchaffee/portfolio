@@ -26,7 +26,7 @@ const BlogPost = () => {
     }
 
     return (
-        <article className="max-w-7xl mx-auto px-4 md:px-20 py-8">
+        <article className="max-w-7xl mx-auto px-12 md:px-20 py-8">
             <BouncyBox delayOffset={0}>
                 <Link to={"/blog"} className="text-start text-xs text-zinc-400 hover:underline">
                     {`<- Back to all posts`}
@@ -35,8 +35,12 @@ const BlogPost = () => {
                 <h1 className="text-3xl font-bold mt-4">{post.title}</h1>
                 <p className="text-xs text-zinc-500 mt-3">{post.publishedAt}</p>
 
-                <div className="my-6 text-zinc-200 text-justify text-lg tracking-wide font-light">
-                    {post.content}
+                <div className="my-6 text-zinc-200 md:text-lg tracking-wide font-light space-y-4">
+                    {post.content.split("\n\n").map((paragraph, index) => (
+                        <p key={index} className="text-justify leading-relaxed">
+                            {paragraph}
+                        </p>
+                    ))}
                 </div>
 
                 <div className="flex gap-2">
@@ -49,7 +53,7 @@ const BlogPost = () => {
 
                 {/* stats */}
                 <div>
-                    <p className="text-[13px] tracking-wide font-light text-zinc-500 mt-3">
+                    <p className="md:text-[13px] tracking-wide font-light text-zinc-500 mt-3">
                         Author: Evan Gregorio
                         </p>
                 </div>

@@ -1,4 +1,5 @@
 import type { PostItem } from "../types/portfolio";
+// NOTES: use \n\n for setting a new paragraph
 
 export const BLOG_POSTS: PostItem[] = [
    {
@@ -26,7 +27,7 @@ export const BLOG_POSTS: PostItem[] = [
                or reference, I wouldn't be able to. I'd know the concepts, like why I used those tools
                and such, but not the how. 
                
-               What qualifies you as knowing or being skilled at something, really? Even now it's still a question
+               \n\nWhat qualifies you as knowing or being skilled at something, really? Even now it's still a question
                I often ask myself.`,
       publishedAt: "August 02, 2026"
    },

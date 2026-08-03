@@ -37,7 +37,7 @@ const Blog = () => {
                   </p>
                   <p className="pt-2 text-xs text-zinc-500">{post.publishedAt}</p>
                   <div className="absolute bottom-4 right-5 text-md text-white/80">
-                    <p className="flex flex-row items-center gap-1">
+                    <p className="flex flex-row items-center gap-1 font-extralight">
                       read article
                       <SquareArrowUpRight className="h-5 w-5"/>
                     </p>

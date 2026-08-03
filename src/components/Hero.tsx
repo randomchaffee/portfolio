@@ -109,7 +109,7 @@ const Hero = () => {
                 </div>
 
                 {/* right side */}
-                <div className="shrink-0 md:pr-5">
+                <div className="shrink-0 mt-4 md:pr-5">
                     <CircularAvatar 
                         alt="Me"
                         src={evanface}
