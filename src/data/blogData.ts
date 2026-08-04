@@ -23,9 +23,9 @@ export const BLOG_POSTS: PostItem[] = [
                but very soon I actually realized I relied so much on AI for building it that
                many of the concepts, such as setting up nginx, creating a docker-compose script,
                and even creating FastAPI backend enpoints, were things I actually just followed based on
-               what the AI instructed. If I was told to recreate those today without outside help
-               or reference, I wouldn't be able to. I'd know the concepts, like why I used those tools
-               and such, but not the how. 
+               what the AI instructed. If I were told to recreate those today without outside help, would I actually know how?
+               I didn't think much of it then but now I know I wouldn't be able to. 
+               I'd know the concepts, like why I used those tools and such, but not the how. 
                
                \n\nWhat qualifies you as knowing or being skilled at something, really? Even now it's still a question
                I often ask myself.`,

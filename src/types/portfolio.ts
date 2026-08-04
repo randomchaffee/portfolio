@@ -1,5 +1,5 @@
 export type DocumentItem = {
-    id: string;
+    id: string | number;
     title: string;
     timestamp: string;
     url?: string;
