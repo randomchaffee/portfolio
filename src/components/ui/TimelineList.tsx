@@ -42,6 +42,7 @@ export const DocumentList = ({ title, items, moreLink }: DocumentListProps) => {
                     <div className="mt-6 text-right">
                         <Link
                             to={moreLink}
+                            onClick={() => window.scrollTo(0, 0)}
                             className="inline-flex items-center gap-1.5 text-xs text-zinc-400 hover:text-zinc-100 transition-colors"
                         >
                             <CircleArrowRight className="w-4 h-4 mt-0.5"/>
