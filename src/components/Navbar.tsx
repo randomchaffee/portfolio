@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router";
 
 interface NavLink {
   label: string;
@@ -53,13 +54,13 @@ const Navbar = () => {
         >
           {/* left side */}
           <div className="flex flex-col items-center md:items-baseline text-lg font-bold leading-tight">
-            <a 
-              href="/"
+            <Link 
+              to="/"
               className="flex flex-col text-sm md:text-lg md:py-0.5 font-bold leading-tight"
             >
               <span>Evan</span>
               <span>Gregorio</span>
-            </a>
+            </Link>
           </div>
           {/* desktop menu */}
           <ul className='hidden items-center gap-8 text-base font-medium md:flex'>
@@ -117,13 +118,13 @@ const Navbar = () => {
           <ul className='flex flex-col gap-4 text-lg font-medium'>
             {listItems.map((item) => (
               <li key={item.label}>
-                <a 
-                  href={item.href}
+                <Link
+                  to={item.href}
                   onClick={() => setIsOpen(false)} // close menu when link is clicked
                   className="block py-2 px-8 font-semibold text-zinc-300 hover:text-white transition-colors"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

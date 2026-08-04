@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import { Routes, Route } from "react-router";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 export default function App() {
   return (
@@ -12,6 +13,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
+
+          {/* article routes */}
+          <Route path="/blog/:slug" element={<BlogPost />}/>
         </Routes>
       </main>
 
