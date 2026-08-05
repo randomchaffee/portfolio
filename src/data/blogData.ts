@@ -14,7 +14,7 @@ export const BLOG_POSTS: PostItem[] = [
                losing the scheduling battle. I wish they could've just announced it through email or class announcement,
                but hey, there's another problem! There isn't any online classroom or group even set up yet.
                               
-               oh well, back to sleep ig.`,
+               \n\noh well, I'm running back to my dorm room.`,
       publishedAt: "August 03, 2026"
    },  
          {
@@ -78,13 +78,4 @@ export const BLOG_POSTS: PostItem[] = [
                I often ask myself.`,
       publishedAt: "August 02, 2026"
    },
-   {
-      id: 1,
-      slug: "why-i-started-this",
-      title: "Why I Started Creating This Website",
-      tags: ["Self Reflection", "Web Development"],
-      excerpt: "idk i just felt like it",
-      content: "idk i just felt like it",
-      publishedAt: "August 02, 2026"
-   }
 ]
