@@ -26,7 +26,7 @@ const BlogPost = () => {
     }
 
     return (
-        <article className="max-w-7xl mx-auto px-12 md:px-20 py-8">
+        <article className="max-w-7xl mx-auto px-12 md:px-36 py-8">
             <BouncyBox delayOffset={0}>
                 <Link to={"/blog"} className="text-start text-xs text-zinc-400 hover:underline">
                     {`<- Back to all posts`}
@@ -36,11 +36,35 @@ const BlogPost = () => {
                 <p className="text-xs text-zinc-500 mt-3">{post.publishedAt}</p>
 
                 <div className="my-6 text-zinc-200 md:text-lg tracking-wide font-light space-y-4">
-                    {post.content.split("\n\n").map((paragraph, index) => (
-                        <p key={index} className="text-justify leading-relaxed">
-                            {paragraph}
-                        </p>
-                    ))}
+                    {post.content.split("\n\n").map((paragraph, index) => {
+                        const imageKey = paragraph.trim();
+                        const inlineImage = post.images?.[imageKey];
+
+                        if (inlineImage) {
+                            return (
+                                <figure key={index} className="my-6">
+                                    <img
+                                        src={inlineImage.url}
+                                        alt={inlineImage.alt}
+                                        className="max-w-full h-auto mx-auto block object-contain rounded-lg border border-zinc-800"
+                                    />
+                                    {inlineImage.caption && (
+                                        <figcaption className="text-center text-xs text-zinc-400 mt-2 italic">
+                                            {inlineImage.caption}
+                                        </figcaption>
+                                    )}
+                                </figure>
+                            )
+                        }
+
+                        // text
+                        return (
+                            <p key={index} className="text-justify leading-relaxed">
+                                {paragraph}
+                            </p>
+                        )
+                    })}
+
                 </div>
 
                 <div className="flex gap-2">

@@ -23,4 +23,13 @@ export type PostItem = {
     content: string;
     publishedAt: string;
     tags: string[];
+    coverImage?: BlogImage;
+    images?: Record<string, BlogImage>;
+}
+
+// images for blog
+export type BlogImage = {
+    url: string;
+    alt: string;
+    caption?: string
 }

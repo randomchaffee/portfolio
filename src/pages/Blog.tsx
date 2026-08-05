@@ -32,9 +32,23 @@ const Blog = () => {
                     >
                       {post.title}
                     </h2>
-                  <p className="text-justify my-2 pt-4 text-md tracking-tight text-zinc-300">
-                    {post.excerpt}
-                  </p>
+
+                    {/* excerpt + image section */}
+                    <div className="flex flex-row items-start justify-between gap-6 my-2 pt-2">
+                      <p className="text-justify text-md tracking-tight text-zinc-300 flex-1 line-clamp-5">
+                        {post.excerpt}
+                      </p>
+
+                      {/* thumbnail */}
+                      {post.coverImage && (
+                        <div className="shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-lg overflow-hidden">
+                          <img 
+                            src={post.coverImage.url}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      )}
+                    </div>
                   <p className="pt-2 text-xs text-zinc-500">{post.publishedAt}</p>
                   <div className="absolute bottom-4 right-5 text-md text-white/80">
                     <p className="flex flex-row items-center gap-1 font-extralight">
