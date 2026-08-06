@@ -1,4 +1,7 @@
 # build
+# notes to self: docker build -t portfolio:v0.1 .
+# notes to self: docker rm -f portfolio
+# notes to self: docker run --name portfolio -it -p 80:80 portfolio:v0.1
 FROM node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
