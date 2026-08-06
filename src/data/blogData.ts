@@ -3,6 +3,45 @@ import type { PostItem } from "../types/portfolio";
 
 export const BLOG_POSTS: PostItem[] = [
    {
+      id: 4,
+      slug: "brushing-up-on-c",
+      title: "Brushing Up On C After Months Not Writing In It",
+      tags: ["C", "Programming", "School"],
+      coverImage: {
+         url: '/images/blog/find-the-difference-c.png',
+         alt: 'C Problem in LeetCode',
+         caption: "me writing in C"
+      },
+      images: {
+         "image:1": {
+            url: "/images/blog/find-the-difference-c.png",
+            alt: "C Problem in LeetCode",
+            caption: "me writing the solution in C",
+         },
+      },
+      excerpt: `I was doing a LeetCode easy problem today, and while solving it using my go-to language (Python),
+                  I felt a sense of sudden dread. I realized that I haven't written a line of code in C in months!
+                  So, I tried converting one of my solutions written in python, to C. It really was quite depressing
+                  at first, I thought I'd forgotten basic C syntax!`,
+      content: `I was doing a LeetCode easy problem today, and while solving it using my go-to language (Python),
+                  I felt a sense of sudden dread. I realized that I haven't written a line of code in C in months!
+                  So, I tried converting one of my solutions written in python, to C. It really was quite depressing
+                  at first, I thought I'd forgotten basic C syntax! Without cheating myself of course, I brushed up
+                  on C syntax on the internet. I was surprised how fast remembering the syntax came to me, it felt kinda
+                  like reuniting with an old friend (no really, it was a similar feeling). 
+                  
+                  \n\nimage:1
+                  
+                  \n\nWriting in C again felt really good and liberating, away from all the abstraction and fluff of other
+                  programming languages I was using these past two semesters. I definitely missed having more responsibility
+                  over memory I'm using in my program. Speaking of memory, well, it doesn't actually show any dynamic
+                  memory allocation there (it's just string manipulation and a hashmap), I'll practice with graph and matrix
+                  problems later (I still remember cmsc 123 lab trauma).
+                  
+                  \n\nThat's all. Thank you for reading!`,
+      publishedAt: "August 06, 2026"
+   },
+   {
       id: 3,
       slug: "first-day-junior-year",
       title: "First Day This Semester And My First Lecture Was Cancelled Unannounced",
