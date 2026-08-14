@@ -74,7 +74,7 @@ export const ActivityTimeline = ({ title, activities }: ActivityTimelineProps) =
 
     return (
         <div className="w-full text-zinc-100 font-sans">
-            <h2 className="pl-2 pb-8 text-xl font-semibold mb-6 tracking-tight">{title}</h2>
+            <h2 className="pl-2 pb-8 text-xl font-semibold mb-6 tracking-tight">{title} (not functional atm)</h2>
 
             {/* container w/ continuous vertical line */}
             <div className="relative pl-6 space-y-4 before:absolute before:left-[3.75px] before:top-3 
