@@ -9,6 +9,7 @@ interface NavLink {
 
 const listItems: NavLink[] = [
   {label: "Blog", href: "/blog"},
+  {label: "Work", href: "/work"}
 ];
 
 const Navbar = () => {
