@@ -18,13 +18,13 @@ const Hero = () => {
                 {/* left side */}
                 <div className="px-16 flex flex-col text-4xl font-normal">
                     <span className="pb-5">
-                        <BouncyText text="Welcome to my site! I'm Evan," />
+                        <BouncyText text="Hi there! I'm Evan, currently" />
                     </span>
                     <span className="pb-4">
-                        <BouncyText text="an aspiring SWE and CS student." delayOffset={1.2} />
+                        <BouncyText text="a hobbyist dev and CS student." delayOffset={1.2} />
                     </span>
                     <span className="text-lg font-light opacity-80">
-                        <SubtleBounceText text="thank you for visiting! feel free to explore." delayOffset={2.9} />
+                        <SubtleBounceText text="thanks for visiting! feel free to look around." delayOffset={2.9} />
                     </span>
                     <BouncyBox delayOffset={3}>
                         <ul className="mt-24 flex flex-row items-center gap-2">
@@ -122,7 +122,7 @@ const Hero = () => {
                 <BouncyBox className="flex flex-col items-center justify-center gap-6 p-5 text-zinc-100">
                     {/* Quote Text */}
                     <p className="text-base md:text-sm opacity-70 tracking-tighter text-center font-normal">
-                        Check out some of my stuff below. Site is still work-in-progress.
+                        Check out some of my stuff below. most of it is still work-in-progress.
                     </p>
             
                     {/* Repeating Subtle Arrow */}
