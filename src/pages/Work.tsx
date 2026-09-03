@@ -18,7 +18,7 @@ const Work = () => {
               <ul>
                 <li>
                   <a
-                    href="https://github.com/PreMiD/Activities/pull/10935"
+                    href="https://premid.app/library/witch%20cult%20translations"
                     className="inline-flex text-emerald-200 hover:underline transition-all"
                   >
                     PreMiD <ArrowUpRight className="w-4"/>
