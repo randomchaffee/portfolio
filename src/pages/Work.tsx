@@ -1,10 +1,38 @@
 import BouncyBox from "../components/ui/BouncyBox"
+import { ArrowUpRight } from 'lucide-react';
 
 const Work = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 md:px-20 py-8">
+    <div className="max-w-7xl mx-auto px-4 md:px-20 py-8">
         <BouncyBox>
-            still working on this page.
+          {/* heading */}
+          <div className="font-semibold text-4xl mb-8">
+            <p className="mb-4">Work</p>
+            <p className="font-normal text-sm text-white/50">List of projects and contributions i've made.</p>
+          </div>
+          {/* main content */}
+          <div className="text-lg font-bold">
+            {/* Contributions Section */}
+            <div className="mb-12">
+              <h2 className="pb-4">Contributions</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/PreMiD/Activities/pull/10935"
+                    className="inline-flex text-emerald-200 hover:underline transition-all"
+                  >
+                    PreMiD <ArrowUpRight className="w-4"/>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Projects Section */}
+            <div className="my-12">
+              <h2 className="pb-4">Projects</h2>
+              not added yet
+            </div>
+          </div>
         </BouncyBox>
     </div>
   )
