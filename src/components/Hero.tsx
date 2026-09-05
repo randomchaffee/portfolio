@@ -1,6 +1,6 @@
 import BouncyText from "./ui/BouncyText";
 import { CircularAvatar } from "./ui/CircularAvatar";
-import evanface from '../assets/anchovy.gif';
+import evanface from '../assets/sandrone.jpg';
 import github from '../assets/icon-github.png';
 import discord from '../assets/icon-discord.png';
 import linkedin from '../assets/icon-linkedin.png';
@@ -108,14 +108,16 @@ const Hero = () => {
                     </BouncyBox>
                 </div>
 
-                {/* right side */}
-                <div className="shrink-0 mt-4 md:pr-5">
-                    <CircularAvatar 
-                        alt="Me"
-                        src={evanface}
-                        className="w-72 h-72"
-                    />
-                </div>
+                <BouncyBox>
+                    {/* right side */}
+                    <div className="shrink-0 mt-4 md:pr-5">
+                        <CircularAvatar 
+                            alt="Me"
+                            src={evanface}
+                            className="w-72 h-72"
+                        />
+                    </div>
+                </BouncyBox>
             </div>
 
             <div className="pt-8">
