@@ -19,9 +19,10 @@ const Work = () => {
                 <li>
                   <a
                     href="https://premid.app/library/witch%20cult%20translations"
-                    className="inline-flex text-emerald-200 hover:underline transition-all"
+                    className="inline-flex  hover:text-emerald-100 transition-all"
                   >
-                    PreMiD <ArrowUpRight className="w-4"/>
+                    PreMiD
+                    <ArrowUpRight className="mt-[0.150rem] w-4"/>
                   </a>
                 </li>
               </ul>
@@ -30,7 +31,35 @@ const Work = () => {
             {/* Projects Section */}
             <div className="my-12">
               <h2 className="pb-4">Projects</h2>
-              not added yet
+              <ul className="text-gray-300 hover:underline">
+                <li>
+                  <a
+                    href="https://github.com/randomchaffee/resinly"
+                    className="inline-flex hover:text-emerald-100 transition-all"
+                  >
+                    Resinly
+                    <ArrowUpRight className="mt-[0.150rem] w-4"/>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/randomchaffee/mygrad"
+                    className="inline-flex  hover:text-emerald-100 transition-all"
+                  >
+                    mygrad
+                    <ArrowUpRight className="mt-[0.150rem] w-4"/>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/randomchaffee/evangregorio.me"
+                    className="inline-flex  hover:text-emerald-100 transition-all"
+                  >
+                    evangregorio.me (self-hosted web platform)
+                    <ArrowUpRight className="mt-[0.150rem] w-4"/>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </BouncyBox>
