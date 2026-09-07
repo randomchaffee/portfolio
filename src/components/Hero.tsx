@@ -12,11 +12,11 @@ import BouncingArrow from "./ui/BouncingArrow";
 
 const Hero = () => {
     return (
-        <section className="min-h-[calc(100svh-4rem)] max-w-7xl mx-auto px-6 md:px-0 py-8 flex flex-col justify-between">
+        <section className="min-h-[calc(100svh-4rem)] max-w-7xl mx-auto px-6 md:px-0 pt-12 pb-8 md:py-8 flex flex-col justify-between">
             
-            <div className="flex flex-col md:flex-row items-center justify-between md:pr-24 my-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between md:pr-24 my-auto gap-8 md:gap-0">
                 {/* left side */}
-                <div className="px-16 flex flex-col text-4xl font-normal">
+                <div className="px-4 md:px-16 flex flex-col text-3xl md:text-4xl font-normal text-center md:text-left">
                     <span className="pb-5">
                         <BouncyText text="Hi there! I'm Evan, currently" />
                     </span>
@@ -27,7 +27,7 @@ const Hero = () => {
                         <SubtleBounceText text="thanks for visiting! feel free to look around." delayOffset={2.9} />
                     </span>
                     <BouncyBox delayOffset={3}>
-                        <ul className="mt-24 flex flex-row items-center gap-2">
+                        <ul className="mt-6 md:mt-24 flex flex-row items-center gap-2 justify-center md:justify-start">
                             <li>
                             <BouncyIcon
                             children={
@@ -110,11 +110,11 @@ const Hero = () => {
 
                 <BouncyBox>
                     {/* right side */}
-                    <div className="shrink-0 mt-4 md:pr-5">
+                    <div className="shrink-0 mt-12 md:mt-4 md:pr-5">
                         <CircularAvatar 
                             alt="Me"
                             src={evanface}
-                            className="w-72 h-72"
+                            className="w-60 h-60 md:w-72 md:h-72"
                         />
                     </div>
                 </BouncyBox>

@@ -7,7 +7,7 @@ interface TextEffectProps {
 }
 
 const containerVariants: Variants = {
-    hidden: { opacity: 0},
+    hidden: { opacity: 0 },
     visible: (delayOffset: number = 0) => ({
         opacity: 1,
         transition: {
@@ -18,7 +18,7 @@ const containerVariants: Variants = {
 };
 
 const letterVariants: Variants = {
-    hidden: { y: 10, opacity: 0},
+    hidden: { y: 10, opacity: 0 },
     visible: {
         y: 0,
         opacity: 1,
@@ -34,26 +34,34 @@ const BouncyText = ({
   text,
   className = "",
   delayOffset = 0,
-}: TextEffectProps ) => {
+}: TextEffectProps) => {
+  // Split string into an array of words
+  const words = text.split(" ");
+
   return (
     <motion.div
-      className={`inline-flex flex-wrap ${className}`}
+      className={`inline-flex flex-wrap justify-center md:justify-start ${className}`}
       variants={containerVariants}
       custom={delayOffset}
       initial="hidden"
       animate="visible"
     >
-      {text.split("").map((char, index) => (
-        <motion.span
-          key={index}
-          variants={letterVariants}
-          className="inline-block whitespace-pre"
-        >
-          {char}
-        </motion.span>
+      {words.map((word, wordIndex) => (
+        // Prevent mid-word breaks by wrapping each word in a whitespace-nowrap container
+        <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.25em]">
+          {word.split("").map((char, charIndex) => (
+            <motion.span
+              key={charIndex}
+              variants={letterVariants}
+              className="inline-block"
+            >
+              {char}
+            </motion.span>
+          ))}
+        </span>
       ))}
     </motion.div>
   );
 };
 
-export default BouncyText
+export default BouncyText;
