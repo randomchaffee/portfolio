@@ -62,7 +62,7 @@ const Navbar = () => {
       >
         <nav 
           aria-label="Main Navigation"
-          className="flex items-center justify-between pt-3 pb-3 px-10 transition-all duration-300"
+          className="flex items-center justify-between pt-3 pb-3 px-5 md:px-10 transition-all duration-300"
         >
           {/* left side */}
           <div className="flex flex-col items-center md:items-baseline text-lg font-bold leading-tight">
@@ -107,14 +107,14 @@ const Navbar = () => {
 
       {/* backdrop menu (appears from below) */}
       <div
-        className={`fixed inset-0 z-40 bg-black/60 transition-opacity
+        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-xs transition-opacity
           duration-300 md:hidden 
           ${isOpen ? 'opacity-100 pointer-events-auto' : ' opacity-0 pointer-events-none'
         }`}
         onClick={() => setIsOpen(false)}
       />
       <div
-          className={`fixed bottom-0 left-0 right-0 z-50 bg-zinc-900 text-white
+          className={`fixed bottom-0 left-0 right-0 z-40 bg-zinc-900 text-white
             rounded-t-2xl border-t border-zinc-800 pt-6 pb-36 transition-transform duration-300
             ease-out md:hidden
             ${isOpen ? "translate-y-0" : "translate-y-full"
@@ -133,7 +133,7 @@ const Navbar = () => {
                 <Link
                   to={item.href}
                   onClick={() => setIsOpen(false)} // close menu when link is clicked
-                  className="block py-2 px-8 font-semibold text-zinc-300 hover:text-white transition-colors"
+                  className="block py-3 px-6 font-semibold text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors"
                 >
                   {item.label}
                 </Link>
