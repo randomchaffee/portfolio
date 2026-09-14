@@ -6,7 +6,7 @@ const Work = () => {
     <div className="max-w-7xl mx-auto px-4 md:px-20 py-8">
         <BouncyBox>
           {/* heading */}
-          <div className="font-semibold text-4xl mb-8">
+          <div className="font-semibold text-4xl mb-8 text-center md:text-start">
             <p className="mb-4">Work</p>
             <p className="font-normal text-sm text-white/50">List of some projects and contributions i've made.</p>
           </div>
@@ -14,7 +14,7 @@ const Work = () => {
           <div className="text-lg font-bold">
             {/* Contributions Section */}
             <div className="mb-12">
-              <h2 className="pb-4">Contributions</h2>
+              <h2 className="pb-4 text-2xl">Contributions</h2>
               <ul className="text-gray-300 hover:underline">
                 <li>
                   <a
@@ -30,7 +30,7 @@ const Work = () => {
 
             {/* Projects Section */}
             <div className="my-12">
-              <h2 className="pb-4">Projects</h2>
+              <h2 className="pb-4 text-2xl">Projects</h2>
               <ul className="text-gray-300 hover:underline">
                 <li>
                   <a
