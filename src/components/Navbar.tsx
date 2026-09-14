@@ -15,6 +15,7 @@ const listItems: NavLink[] = [
 const Navbar = () => {
   // ======= scroll-down effect section ========
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +33,17 @@ const Navbar = () => {
   // ===========================================
 
   // =========== hamburger dropdown section ===========
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  // lock background scroll if mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const toggleMenu = (): void => {
     setIsOpen(!isOpen);
@@ -85,7 +96,7 @@ const Navbar = () => {
           {/* hamburger (only appears on sm) */}
           <button
             onClick={toggleMenu}
-            className="p-2 md:hidden text-white focus:outline-none"
+            className="p-2 md:hidden z-50 relative text-white focus:outline-none"
             aria-label="Toggle navigation menu"
             aria-expanded={isOpen}
           >
@@ -96,7 +107,7 @@ const Navbar = () => {
 
       {/* backdrop menu (appears from below) */}
       <div
-        className={`fixed inset-0 z-50 bg-black/60 transition-opacity
+        className={`fixed inset-0 z-40 bg-black/60 transition-opacity
           duration-300 md:hidden 
           ${isOpen ? 'opacity-100 pointer-events-auto' : ' opacity-0 pointer-events-none'
         }`}
